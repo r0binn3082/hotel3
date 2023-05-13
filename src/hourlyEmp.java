@@ -1,6 +1,11 @@
+import java.util.Date;
 public class hourlyEmp extends employee {
     private double hours;
     private int perhour =50;
+
+    public hourlyEmp(String name , String address, String phoneNumber, int age, gender gender, nationalty nat, Date hiringDate){
+        super(name, address, phoneNumber, age, gender, nat, hiringDate);
+    }
 
     public void setHours(double hours) {
         this.hours = hours;
