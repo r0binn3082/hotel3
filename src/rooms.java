@@ -40,7 +40,6 @@ public class rooms extends Hotel {
     }
   }
 
-
   public void check_out(){
     System.out.println("enter your room number");
     int x=super.sc.nextInt();
