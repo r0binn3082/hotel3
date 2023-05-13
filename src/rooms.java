@@ -14,13 +14,13 @@ public class rooms extends Hotel {
   }
 
   public void reservation(){
-    System.out.println("confirm your reservation \n1. yes\n2. no");
-    int z=sc.nextInt();
+    System.out.println("confirm your reservation. \n1. yes\n2. no");
+    int z= sc.nextInt();
     if(z==1){
       if (count1st!=(floor1st.length-1)){
         arrl.remove(floor1st[count1st]-101);
         count1st++;
-        System.out.println("your reservation has been done");
+        System.out.println("your reservation has been done.");
       }
     }
   }
