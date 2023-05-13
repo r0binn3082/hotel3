@@ -8,6 +8,16 @@ public abstract class person {
     protected nationalty nat;
     Date birthDate = new Date();
 
+
+    public person(String name , String address, String phoneNumber, int age, gender gender, nationalty nat, Date birthDate){
+        this.name = name;
+        this.address = address; 
+        this.phoneNumber = phoneNumber;
+        this.gender = gender; 
+        this.nat = nat;
+        this.birthDate = birthDate;
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }

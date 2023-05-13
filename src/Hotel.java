@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 import java.util.*;
 public class Hotel {
 
@@ -13,6 +12,7 @@ public class Hotel {
 
   Scanner sc = new Scanner(System.in);
   ArrayList<Integer> arrl=new ArrayList<Integer>();
+  
 
   public Hotel(){
   for(int i=0;i<floor1st.length;i++){
@@ -26,7 +26,7 @@ public class Hotel {
   }
 
 
-  System.out.println("                    welcome to  our hotel ");
+  System.out.println("welcome to  our hotel ");
   System.out.println("please enter your personal information\nenter yor name");
   String n=sc.next();
 

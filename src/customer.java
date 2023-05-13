@@ -7,6 +7,25 @@ public class customer extends person {
     Date checkOutDate = new Date();
     private int roomNumber;
 
+    public customer(
+        String name,
+        String address,
+        String phoneNumber, 
+        int age, 
+        gender gender, 
+        nationalty nat, 
+        Date birthDate,
+        Date checkInDate,
+        Date checkOutDate,
+        int roomNumber
+        )
+    {
+        super(name, address, phoneNumber, age, gender, nat, birthDate);
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+        this.roomNumber = roomNumber;
+    }
+
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }

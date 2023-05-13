@@ -5,6 +5,10 @@ public class manger extends person implements workers2 {
     private postion Mangerpos;
     private double salary;
 
+    public manger(String name , String address, String phoneNumber, int age, gender gender, nationalty nat, Date birthDate){
+        super(name, address, phoneNumber, age, gender, nat, birthDate);
+    }
+
     @Override
     public void getAllPostion() {
         for(postion pos : postion.values()){
