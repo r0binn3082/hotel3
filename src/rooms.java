@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class rooms extends Hotel {
   
   public rooms(){
@@ -14,7 +12,7 @@ public class rooms extends Hotel {
     }
   }
 
-  public void reservation(){
+  public void  reservation(){
     System.out.println("confirm your reservation. \n1. yes\n2. no");
     int z= sc.nextInt();
     switch (z) {
@@ -39,9 +37,7 @@ public class rooms extends Hotel {
         System.out.println("your reservation has done sucssfuly.");
       }else if(z==2){
       System.out.println("your reservation has been canceled");
-      }else if(z>2){
-      System.out.println("");
-      }
+      }else System.out.println("wrong information");
     }
   }
   
@@ -90,4 +86,6 @@ public class rooms extends Hotel {
   public void empty_rooms(){
     System.out.println(arrl);
   }
+
+
 }

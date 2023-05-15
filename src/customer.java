@@ -1,5 +1,4 @@
 import java.util.Date;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class customer extends person {
@@ -16,22 +15,20 @@ public class customer extends person {
         checkOutDate =null;
         roomNumber =0;
     }
-
     public customer(
+
         String name,
         String address,
         String phoneNumber,
         String nationalId,
         int age, 
-        gender gender, 
-        nationalty nat, 
         Date birthDate,
         Date checkInDate,
         Date checkOutDate,
         int roomNumber
         )
     {
-        super(name, address, phoneNumber, nationalId, age, gender, nat, birthDate);
+        super(name, address, phoneNumber, nationalId, age, birthDate);
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.roomNumber = roomNumber;
