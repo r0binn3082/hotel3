@@ -5,8 +5,8 @@ public class manger extends person implements workers2 {
     private postion Mangerpos;
     private double salary;
 
-    public manger(String name , String address, String phoneNumber, int age, gender gender, nationalty nat, Date birthDate){
-        super(name, address, phoneNumber, age, gender, nat, birthDate);
+    public manger(String name , String address, String phoneNumber,String nationalId, int age, gender gender, nationalty nat, Date birthDate){
+        super(name, address, phoneNumber,nationalId, age, gender, nat, birthDate);
     }
 
     @Override

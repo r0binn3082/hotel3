@@ -1,22 +1,47 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 public abstract class person {
     protected String name;
     protected String address;
     protected String phoneNumber;
+    protected String nationalId;
     protected int age;
     protected gender gender;
     protected nationalty nat;
     Date birthDate = new Date();
+    SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/Y");
 
-
-    public person(String name , String address, String phoneNumber, int age, gender gender, nationalty nat, Date birthDate){
-        this.name = name;
-        this.address = address; 
-        this.phoneNumber = phoneNumber;
-        this.gender = gender; 
-        this.nat = nat;
-        this.birthDate = birthDate;
+    person(){
+        name = null;
+        address =null;
+        phoneNumber =null; 
+        age  = 0;
+        gender  =null;
+        nat =null;
+        birthDate =null;
+        nationalId = null;
     }
+
+    public person
+        (
+            String name, 
+            String address, 
+            String phoneNumber, 
+            String nationalId, 
+            int age, 
+            gender gender, 
+            nationalty nat, 
+            Date birthDate
+            )
+        {
+            this.name = name;
+            this.address = address; 
+            this.phoneNumber = phoneNumber;
+            this.nationalId = nationalId;
+            this.gender = gender; 
+            this.nat = nat;
+            this.birthDate = birthDate;
+        }
 
     public void setAddress(String address) {
         this.address = address;
@@ -75,7 +100,7 @@ public abstract class person {
         "phone number" + phoneNumber + 
         "nationalty" + nat +
         "gender" + gender +
-        "birth date" + birthDate
+        "birth date" + dateFormat.format(birthDate)
         ;
     }
 }

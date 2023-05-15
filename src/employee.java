@@ -4,8 +4,8 @@ public class employee extends person implements  workers2 {
     protected double salary;
     Date hiringDate = new Date();
 
-    public employee( String name , String address, String phoneNumber, int age, gender gender, nationalty nat, Date birthDate){
-        super(name, address, phoneNumber, age, gender, nat, birthDate);
+    public employee( String name , String address, String phoneNumber, String nationalId, int age, gender gender, nationalty nat, Date birthDate){
+        super(name, address, phoneNumber, nationalId, age, gender, nat, birthDate);
     }
 
     @Override

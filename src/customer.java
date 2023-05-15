@@ -1,4 +1,6 @@
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class customer extends person {
 
@@ -6,11 +8,20 @@ public class customer extends person {
     Date checkInDate = new Date();
     Date checkOutDate = new Date();
     private int roomNumber;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/Y");
+
+    public customer(){
+        super();
+        checkInDate =null;
+        checkOutDate =null;
+        roomNumber =0;
+    }
 
     public customer(
         String name,
         String address,
-        String phoneNumber, 
+        String phoneNumber,
+        String nationalId,
         int age, 
         gender gender, 
         nationalty nat, 
@@ -20,7 +31,7 @@ public class customer extends person {
         int roomNumber
         )
     {
-        super(name, address, phoneNumber, age, gender, nat, birthDate);
+        super(name, address, phoneNumber, nationalId, age, gender, nat, birthDate);
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.roomNumber = roomNumber;
@@ -46,10 +57,10 @@ public class customer extends person {
         return roomNumber;
     }
     public Date getCheckInDate() {
-        return checkInDate;
+        return checkInDate ;
     }
     public Date getCheckOutDate() {
-        return checkOutDate;
+        return checkOutDate ;
     }
 
     @Override
@@ -57,7 +68,7 @@ public class customer extends person {
         return super.toString() + 
         "serialNumber" + serialNumber +
         "room number" + roomNumber +
-        "check in date " + checkInDate +
-        "check out date " + checkOutDate;
+        "check in date " + dateFormat.format(checkInDate)  +
+        "check out date " + dateFormat.format(checkOutDate) ;
     }
 }
