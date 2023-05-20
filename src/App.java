@@ -1,6 +1,6 @@
 import java.util.*;
-import java.text.SimpleDateFormat;
 import java.text.*;
+
 public class App {
 
     static String name;
@@ -14,23 +14,26 @@ public class App {
     static int roomNumber;
     public static void main(String[] args) throws ParseException {
         rooms r1 = new rooms();
-
+        
         int x = greeting();
         select(x, r1);
 
+        
+        
         customer c1 = new customer(
-        name, 
-        address, 
-        phoneNumber,
-        nationalId,
-        age, 
-        birthDate, 
-        checkInDate,
-        checkOutDate,
-        roomNumber
-        );
+            name, 
+            address, 
+            phoneNumber,
+            nationalId,
+            age, 
+            birthDate, 
+            checkInDate,
+            checkOutDate,
+            roomNumber
+            );
     }
-
+    
+    
     public static int greeting() {
 
         Scanner keyboard  = new Scanner(System.in);
@@ -39,11 +42,12 @@ public class App {
         System.out.println("how can i help u?");
         System.out.println("1.log in");
         System.out.println("2.get an avalibale room");
-        System.out.println("3. book a room");
-        System.out.println("4.cancel booking");
-        System.out.println("5.checking in");
+        System.out.println("3.for reservation");
+        System.out.println("4.book a room");
+        System.out.println("5.cancel booking");
         System.out.println("6.checking out");
-        System.out.println("6.get fee");
+        System.out.println("7.get fee");
+        System.out.println("8.for room service");
 
         int x = keyboard.nextInt();
         return x;
@@ -68,14 +72,25 @@ public class App {
         age = keyboard.nextInt();
         
         System.out.println("enter ur birthday mm/dd/yy ");
-        birthDate = dateFormat.parse(keyboard.nextLine());
+        String d = keyboard.nextLine();
         
-        System.out.println("enter ur check in date mm/dd/yy ");
-        checkInDate = dateFormat.parse(keyboard.nextLine());
+        if(!d.isEmpty() ){
+            birthDate = dateFormat.parse(d);
+            System.out.println(birthDate);
+        }
         
         System.out.println("enter ur check out date mm/dd/yy ");
-        checkOutDate = dateFormat.parse(keyboard.nextLine());
-    
+        String s = keyboard.nextLine();
+        if(!s.isEmpty()){
+            checkInDate = dateFormat.parse(s);
+        }
+        System.out.println("enter ur check in date mm/dd/yy ");
+        String t = keyboard.nextLine();
+
+        if(!t.isEmpty()){
+            checkOutDate = dateFormat.parse(t);
+        }
+
     }
 
     public static void gettingFee() {
@@ -106,15 +121,23 @@ public class App {
                 r1.empty_rooms();
             break;
             case 3:
-                r1.reservation();
+            r1.kindOfResrvation();
             break;
             case 4:
-                r1.checkOut();
+                r1.room_booking();
             break;
             case 5:
+                r1.cancel_booking();
             break;
             case 6:
+                r1.checkOut();
+            break;
+            case 7:
                 gettingFee();
+            break;
+            case 8:
+            roomService rs= new roomService();    
+            rs.get_service();
             break;
             default:
                 System.out.println("wong information");
@@ -124,6 +147,5 @@ public class App {
             break;
         }
     }
-
 
 }

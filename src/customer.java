@@ -3,7 +3,6 @@ import java.text.SimpleDateFormat;
 
 public class customer extends person {
 
-    protected long serialNumber;
     Date checkInDate = new Date();
     Date checkOutDate = new Date();
     private int roomNumber;
@@ -37,9 +36,6 @@ public class customer extends person {
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
-    public void setSerialNumber(long serialNumber) {
-        this.serialNumber = serialNumber;
-    }
     public void setCheckInDate(Date checkInDate) {
         this.checkInDate = checkInDate;
     }
@@ -47,9 +43,6 @@ public class customer extends person {
         this.checkOutDate = checkOutDate;
     }
 
-    public long getSerialNumber() {
-        return serialNumber;
-    }
     public int getRoomNumber() {
         return roomNumber;
     }
@@ -63,7 +56,6 @@ public class customer extends person {
     @Override
     public String toString() {
         return super.toString() + 
-        "serialNumber" + serialNumber +
         "room number" + roomNumber +
         "check in date " + dateFormat.format(checkInDate)  +
         "check out date " + dateFormat.format(checkOutDate) ;

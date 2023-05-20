@@ -1,0 +1,20 @@
+public enum nationalty {
+        Egyptian, 
+        Algerin,
+        Syrian,
+        Brazilian,
+        Candian, 
+        British, 
+        Croat, 
+        German,  
+        Hungrien,
+        Iraqi,
+        Italian,
+        Japaness, 
+        Libyan,
+        Morcooan, 
+        Omani,
+        Russian,
+        Tunisian,
+        Other;
+}
